@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ericco90.github.io/Jasa-pembuatan-web/sitemap.xml
