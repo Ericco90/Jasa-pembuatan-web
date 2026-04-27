@@ -91,6 +91,39 @@ body {
   text-decoration:none;
   font-weight:600;
 }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #0f172a;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
 </style>
 
 </head>
@@ -127,7 +160,11 @@ body {
                     </svg>
                     Konsultasi
                 </a>
-            
+            <div class="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
             </div>
         </div>
     </nav>
@@ -170,6 +207,10 @@ body {
 
 </div>
 </div>
-
+<script>
+function toggleMenu() {
+  document.querySelector(".nav-links").classList.toggle("active");
+}
+</script>
 </body>
 </html>
